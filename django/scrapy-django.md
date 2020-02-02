@@ -1,15 +1,12 @@
-# Intro
+# Django Scrapy Integration
 fffffff
 
-## Settings.py
+## Django Settings
+## Scrapy Settings
 
-## Models
+## Pipelines
 
-## Migrations
-
-## Django Admin
-
-## Static files
+## Scrapyd API
 
 ## Enlaces utiles
 - [Celery](https://docs.celeryproject.org/en/latest/django/first-steps-with-django.html)
