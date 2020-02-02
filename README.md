@@ -11,5 +11,5 @@ features:
   details: Settings, Models, Admin & queue tasks
 - title: Django REST Framework
   details: REST API, HTTP, Microservices
-footer: Made by  with ❤️
+footer: Made by RaulNovelo with ❤️ 
 ---

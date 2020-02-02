@@ -62,6 +62,15 @@ module.exports = {
           ]
         }
       ],
+      '/django/': [
+        {
+          title: 'Django',
+          collapsable: false,
+          children: [
+            '',
+          ]
+        }
+      ],
     }
   },
 
