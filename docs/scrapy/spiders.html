@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spiders | Scrapy-Django Docs</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.0">
+    <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.f1662caa.css" as="style"><link rel="preload" href="/assets/js/app.e1513125.js" as="script"><link rel="preload" href="/assets/js/2.56314ec9.js" as="script"><link rel="preload" href="/assets/js/15.4e34f699.js" as="script"><link rel="prefetch" href="/assets/js/10.7d18bc2f.js"><link rel="prefetch" href="/assets/js/11.0a8c6283.js"><link rel="prefetch" href="/assets/js/12.0e01c814.js"><link rel="prefetch" href="/assets/js/13.95adb08f.js"><link rel="prefetch" href="/assets/js/14.96c48038.js"><link rel="prefetch" href="/assets/js/16.276361cf.js"><link rel="prefetch" href="/assets/js/3.5aa43c93.js"><link rel="prefetch" href="/assets/js/4.6dacb587.js"><link rel="prefetch" href="/assets/js/5.8a3262ec.js"><link rel="prefetch" href="/assets/js/6.a025d962.js"><link rel="prefetch" href="/assets/js/7.e107574c.js"><link rel="prefetch" href="/assets/js/8.ad0e1c54.js"><link rel="prefetch" href="/assets/js/9.353ff94c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f1662caa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Scrapy-Django Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/scrapy/" class="nav-link router-link-active">
+  Scrapy
+</a></div><div class="nav-item"><a href="/django/" class="nav-link">
+  Django
+</a></div><div class="nav-item"><a href="/rest/" class="nav-link">
+  REST Framework
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/scrapy/" class="nav-link router-link-active">
+  Scrapy
+</a></div><div class="nav-item"><a href="/django/" class="nav-link">
+  Django
+</a></div><div class="nav-item"><a href="/rest/" class="nav-link">
+  REST Framework
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Scrapy</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/scrapy/" class="sidebar-link">Intro</a></li><li><a href="/scrapy/spiders.html" class="active sidebar-link">Spiders</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/scrapy/spiders.html#estrcutura-de-una-etiqueta-html" class="sidebar-link">Estrcutura de una etiqueta HTML</a></li><li class="sidebar-sub-header"><a href="/scrapy/spiders.html#css-xpath-selector" class="sidebar-link">CSS &amp; XPath Selector</a></li><li class="sidebar-sub-header"><a href="/scrapy/spiders.html#response-object" class="sidebar-link">Response Object</a></li><li class="sidebar-sub-header"><a href="/scrapy/spiders.html#login-with-formrequest" class="sidebar-link">Login with FormRequest</a></li><li class="sidebar-sub-header"><a href="/scrapy/spiders.html#running-the-spiders" class="sidebar-link">Running the spiders</a></li></ul></li><li><a href="/scrapy/items.html" class="sidebar-link">Items</a></li><li><a href="/scrapy/pipelines.html" class="sidebar-link">Pipelines</a></li><li><a href="/scrapy/scrapyd.html" class="sidebar-link">Scrapyd</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="spiders"><a href="#spiders" class="header-anchor">#</a> Spiders</h1> <p>Los scripts que se encargan de hacer WebScrapping Scrapy los llama Spiders
+cada uno hereda de la clase <code>Spider</code> y contiene un metodo llamado <code>parse</code></p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token keyword">from</span> scrapy <span class="token keyword">import</span> Spider<span class="token punctuation">,</span> CrawlSpider<span class="token punctuation">,</span> BaseSpider
+
+<span class="token keyword">class</span> <span class="token class-name">MySpider</span><span class="token punctuation">(</span>scrapy<span class="token punctuation">.</span>Spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ... </span>
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>$ scrapy genspider example example.com                                         
+</code></pre></div><h2 id="estrcutura-de-una-etiqueta-html"><a href="#estrcutura-de-una-etiqueta-html" class="header-anchor">#</a> Estrcutura de una etiqueta HTML</h2> <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7rKR7ylzCkT7y5p19G9yhqhKDYkQ0kMRS2pDx_6_wErgVP7Hi" alt=""></p> <h2 id="css-xpath-selector"><a href="#css-xpath-selector" class="header-anchor">#</a> CSS &amp; XPath Selector</h2> <p>Ambas extraen los mismos datos del mismo sitio web, pero <code>toscrape-css</code>
+emplea selectores CSS, mientras que <code>toscrape-xpath</code> emplea expresiones XPath.</p> <ul><li><a href="https://medium.com/dataflow-kit/css-selectors-vs-xpath-f368b431c9dc" target="_blank" rel="noopener noreferrer">CSS Selectors vs XPath<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># Ejemplo de scraping usando selectores CSS</span>
+<span class="token keyword">import</span> scrapy
+
+<span class="token keyword">class</span> <span class="token class-name">ToScrapeCSSSpider</span><span class="token punctuation">(</span>scrapy<span class="token punctuation">.</span>Spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> <span class="token string">&quot;toscrape-css&quot;</span>
+    start_urls <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token string">'http://quotes.toscrape.com/'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">parse</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        &quot;&quot;&quot;</span>
+        <span class="token comment"># hay que tomar encuenta que es una busqueda asi que devuelve siempre una lista o arreglo</span>
+        <span class="token keyword">for</span> quote <span class="token keyword">in</span> response<span class="token punctuation">.</span>css<span class="token punctuation">(</span><span class="token string">&quot;div.quote&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># div.quote =&gt; '&lt;div class=&quot;quote&quot;&gt;...&lt;/div&gt;' </span>
+            <span class="token keyword">yield</span> <span class="token punctuation">{</span>
+                <span class="token string">'text'</span><span class="token punctuation">:</span> quote<span class="token punctuation">.</span>css<span class="token punctuation">(</span><span class="token string">&quot;span.text::text&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>extract_first<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment"># span.text =&gt; '&lt;span class=&quot;text&quot;&gt;...&lt;/span&gt;' y ::text le indica que no debe retornar la etiqueta sino el texto dentro de ella</span>
+                <span class="token string">'author'</span><span class="token punctuation">:</span> quote<span class="token punctuation">.</span>css<span class="token punctuation">(</span><span class="token string">&quot;small.author::text&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>extract_first<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token comment"># &gt; el signo menor o igual indica que debe extraer los hijos</span>
+                <span class="token string">'tags'</span><span class="token punctuation">:</span> quote<span class="token punctuation">.</span>css<span class="token punctuation">(</span><span class="token string">&quot;div.tags &gt; a.tag::text&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>extract<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># div.tags &gt; a.tag =&gt; '&lt;div class=&quot;tags&quot;&gt; &lt;a class=&quot;&quot;tag&gt;Poema&lt;/a&gt;... &lt;/div&gt;'</span>
+            <span class="token punctuation">}</span>
+
+        next_page_url <span class="token operator">=</span> response<span class="token punctuation">.</span>css<span class="token punctuation">(</span><span class="token string">&quot;li.next &gt; a::attr(href)&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>extract_first<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> next_page_url <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">yield</span> scrapy<span class="token punctuation">.</span>Request<span class="token punctuation">(</span>response<span class="token punctuation">.</span>urljoin<span class="token punctuation">(</span>next_page_url<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="response-object"><a href="#response-object" class="header-anchor">#</a> Response Object</h2> <div class="language-py extra-class"><pre class="language-py"><code>response<span class="token punctuation">.</span>headers <span class="token comment"># acceder a los headers de la respuesta</span>
+response<span class="token punctuation">.</span>text <span class="token comment"># texto plano de la respuesta</span>
+response<span class="token punctuation">.</span>body <span class="token comment"># html o formato de la respuesta</span>
+response<span class="token punctuation">.</span>css <span class="token comment"># selector css</span>
+response<span class="token punctuation">.</span>xpath <span class="token comment"># selector xpath</span>
+</code></pre></div><h2 id="login-with-formrequest"><a href="#login-with-formrequest" class="header-anchor">#</a> Login with FormRequest</h2> <h2 id="running-the-spiders"><a href="#running-the-spiders" class="header-anchor">#</a> Running the spiders</h2> <p>Puede ejecutar un <code>spider</code> utilizando el comando <code>scrapy crawl</code>:</p> <div class="language- extra-class"><pre><code>$ scrapy crawl toscrape-css
+</code></pre></div><p>Si desea guardar los datos raspados en un archivo, puede usar la opción <code>-o</code>:</p> <div class="language- extra-class"><pre><code>$ scrapy crawl toscrape-css -o quotes.json
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/scrapy/" class="prev router-link-active">
+        Intro
+      </a></span> <span class="next"><a href="/scrapy/items.html">
+        Items
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e1513125.js" defer></script><script src="/assets/js/2.56314ec9.js" defer></script><script src="/assets/js/15.4e34f699.js" defer></script>
+  </body>
+</html>
