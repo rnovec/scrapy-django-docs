@@ -10,12 +10,16 @@
   "repository": "/scrapyd-django-docs",
   "scripts": {
     "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "build": "vuepress build .",
+    "publish": "npm run build && node publish.js"
   },
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.0.0",
     "@vuepress/plugin-back-to-top": "^1.0.0",
     "@vuepress/plugin-medium-zoom": "^1.0.0"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

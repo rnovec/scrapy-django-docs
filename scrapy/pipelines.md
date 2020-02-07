@@ -1,4 +1,8 @@
 # Pipelines
+Por último tenemos las *Pipelines* que son nuestras salidas de la información y como podemos notar recibe un item
+el cual sera utilizado para obtener la información y finalmente retornado para ser gaurdado como u JSON, XML o CSV.
+
+Tambien es comun ejecutar conexiones a Modelos de Django en esta sección para guardar la informaicón en la DB.
 
 ```py
 # -*- coding: utf-8 -*-
