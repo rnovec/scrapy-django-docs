@@ -59,6 +59,7 @@ module.exports = {
             'items',
             'pipelines',
             'scrapyd',
+            'scrapy-api',
           ]
         }
       ],
@@ -68,7 +69,6 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'scrapy-api',
             'rest',
           ]
         }
