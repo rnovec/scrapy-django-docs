@@ -1,4 +1,4 @@
-# Intro
+# REST Framework
 
 ## HTTP & Status Codes
 
@@ -6,7 +6,7 @@
 
 ## Settings
 
-## Serielizers
+## Serializers
 
 ## Viewsets
 

@@ -1,10 +1,3 @@
-# Django Scrapy Integration
-fffffff
-
-## Django Settings
-## Scrapy Settings
-
-## Pipelines
 
 ## Scrapyd API
 

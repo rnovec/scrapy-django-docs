@@ -68,18 +68,17 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'celery',
-            'scrapy-django',
+            'scrapy-api',
+            'rest',
           ]
         }
       ],
-      '/rest/': [
+      '/celery/': [
         {
-          title: 'REST Framework',
+          title: 'Celery',
           collapsable: false,
           children: [
-            '',
-            'auth',
+            ''
           ]
         }
       ],
