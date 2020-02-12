@@ -8,7 +8,6 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class SiiCustomer(models.Model):
-    # https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal
     uuid = models.UUIDField(default=uuid4(), primary_key=True) # identificador único
     user = models.ForeignKey(User, on_delete=models.CASCADE) # cuenta de usuario
     rut = models.CharField(default="", blank=True, null=True, max_length=20) # clave
@@ -76,4 +75,15 @@ Al crear un nuevo modelo o hacer algun cambio en sus campos:
     $ python manage.py makemigrations
     $ python manage.py migrate
 
-## Enlaces utiles
+## Variables de Entorno
+```py
+import os
+ 
+# printing environment variables
+print(os.environ)
+print(os.environ.get('DEBUG', None))
+```
+
+## Enlaces útiles
+[UUID](https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal)
+[Advenced filtering](https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects)
