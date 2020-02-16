@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
-    <link rel="preload" href="/scrapy-django-docs/assets/css/0.styles.823876df.css" as="style"><link rel="preload" href="/scrapy-django-docs/assets/js/app.7d83bbeb.js" as="script"><link rel="preload" href="/scrapy-django-docs/assets/js/2.242dbaec.js" as="script"><link rel="preload" href="/scrapy-django-docs/assets/js/14.a1dc3f34.js" as="script"><link rel="prefetch" href="/scrapy-django-docs/assets/js/10.dfff0224.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/11.ba109c6a.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/12.c6920c6b.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/13.cabc12aa.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/15.3d909d0d.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/16.fc1ecc0d.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/17.d06b4764.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/18.45191c49.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/3.9f28050d.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/4.dcd8f2b0.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/5.f0a7b293.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/6.5c213c75.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/7.b2cc3b10.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/8.69b9d75d.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/9.981c9ed5.js">
+    <link rel="preload" href="/scrapy-django-docs/assets/css/0.styles.823876df.css" as="style"><link rel="preload" href="/scrapy-django-docs/assets/js/app.b0a8c77d.js" as="script"><link rel="preload" href="/scrapy-django-docs/assets/js/2.242dbaec.js" as="script"><link rel="preload" href="/scrapy-django-docs/assets/js/14.a1dc3f34.js" as="script"><link rel="prefetch" href="/scrapy-django-docs/assets/js/10.bce29ab8.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/11.bb3ec3ca.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/12.c6920c6b.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/13.cabc12aa.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/15.5dd97926.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/16.fc1ecc0d.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/17.d06b4764.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/18.45191c49.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/3.9f28050d.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/4.dcd8f2b0.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/5.f0a7b293.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/6.5c213c75.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/7.b2cc3b10.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/8.69b9d75d.js"><link rel="prefetch" href="/scrapy-django-docs/assets/js/9.981c9ed5.js">
     <link rel="stylesheet" href="/scrapy-django-docs/assets/css/0.styles.823876df.css">
   </head>
   <body>
@@ -18,14 +18,10 @@
   Scrapy
 </a></div><div class="nav-item"><a href="/scrapy-django-docs/django/" class="nav-link">
   Django
-</a></div><div class="nav-item"><a href="/scrapy-django-docs/rest/" class="nav-link">
-  REST Framework
 </a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/scrapy-django-docs/scrapy/" class="nav-link router-link-active">
   Scrapy
 </a></div><div class="nav-item"><a href="/scrapy-django-docs/django/" class="nav-link">
   Django
-</a></div><div class="nav-item"><a href="/scrapy-django-docs/rest/" class="nav-link">
-  REST Framework
 </a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Scrapy</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/scrapy-django-docs/scrapy/" class="sidebar-link">Intro</a></li><li><a href="/scrapy-django-docs/scrapy/spiders.html" class="sidebar-link">Spiders</a></li><li><a href="/scrapy-django-docs/scrapy/items.html" class="sidebar-link">Items</a></li><li><a href="/scrapy-django-docs/scrapy/pipelines.html" class="active sidebar-link">Pipelines</a></li><li><a href="/scrapy-django-docs/scrapy/scrapyd.html" class="sidebar-link">Scrapyd</a></li><li><a href="/scrapy-django-docs/scrapy/scrapy-api.html" class="sidebar-link">Scrapyd API</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="pipelines"><a href="#pipelines" class="header-anchor">#</a> Pipelines</h1> <p>Por último tenemos las <em>Pipelines</em> que son nuestras salidas de la información y como podemos notar recibe un item
 el cual sera utilizado para obtener la información y finalmente retornado para ser gaurdado como u JSON, XML o CSV.</p> <p>Tambien es comun ejecutar conexiones a Modelos de Django en esta sección para guardar la informaicón en la DB.</p> <div class="language-py extra-class"><pre class="language-py"><code><span class="token comment"># -*- coding: utf-8 -*-</span>
 
@@ -62,6 +58,6 @@ ITEM_PIPELINES <span class="token operator">=</span> <span class="token punctuat
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/scrapy-django-docs/assets/js/app.7d83bbeb.js" defer></script><script src="/scrapy-django-docs/assets/js/2.242dbaec.js" defer></script><script src="/scrapy-django-docs/assets/js/14.a1dc3f34.js" defer></script>
+    <script src="/scrapy-django-docs/assets/js/app.b0a8c77d.js" defer></script><script src="/scrapy-django-docs/assets/js/2.242dbaec.js" defer></script><script src="/scrapy-django-docs/assets/js/14.a1dc3f34.js" defer></script>
   </body>
 </html>
