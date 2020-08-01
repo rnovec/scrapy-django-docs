@@ -42,10 +42,6 @@ module.exports = {
       {
         text: 'Django',
         link: '/django/'
-      },
-      {
-        text: 'REST Framework',
-        link: '/rest/'
       }
     ],
     sidebar: {
